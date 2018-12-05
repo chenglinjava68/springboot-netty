@@ -5,7 +5,6 @@ import com.dxp.springbootnetty.config.ThreadPoolProperties;
 import com.dxp.springbootnetty.netty.ChannelRepository;
 import com.dxp.springbootnetty.netty.NettyServer;
 import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -41,7 +40,7 @@ public class Application {
         return new ChannelRepository();
     }
 
-    @Autowired
+    @Bean
     public Gson gson() {
         return new Gson();
     }

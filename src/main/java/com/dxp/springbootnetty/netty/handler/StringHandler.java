@@ -50,7 +50,6 @@ public class StringHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        cause.printStackTrace();
         Channel channel = ctx.channel();
         channelRepository.remove(channel.id().asLongText());
         ctx.channel().close();
@@ -58,7 +57,6 @@ public class StringHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-        super.handlerRemoved(ctx);
         Channel channel = ctx.channel();
         channelRepository.remove(channel.id().asLongText());
     }
