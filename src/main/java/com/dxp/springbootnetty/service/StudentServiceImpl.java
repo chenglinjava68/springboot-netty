@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    @Async("asyncTaskExecutor")
+    @Async
     public void add(StudentInfo studentInfo) {
         this.logger.info("add student: {}", studentInfo);
         Student student = new Student();
