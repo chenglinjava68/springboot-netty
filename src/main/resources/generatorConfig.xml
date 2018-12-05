@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <properties resource="application.properties"/>
+
+    <context id="springbootnetty" targetRuntime="MyBatis3Simple">
+
+        <property name="javaFileEncode" value="UTF-8"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+        </plugin>
+
+        <commentGenerator type="org.mybatis.generator.internal.DefaultCommentGenerator">
+            <property name="addRemarkComments" value="true"/>
+            <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        </jdbcConnection>
+
+        <!--Java模型生成器-->
+        <javaModelGenerator targetPackage="com.dxp.springbootnetty.domain" targetProject="src\main\java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- mapper.xml -->
+        <sqlMapGenerator targetPackage="com.dxp.springbootnetty.repository.mapper" targetProject="src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--  dao   -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dxp.springbootnetty.repository" targetProject="src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table schema="test1" tableName="student">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>

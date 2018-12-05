@@ -1,0 +1,78 @@
+{
+  "groups": [
+    {
+      "name": "netty",
+      "type": "com.dxp.springbootnetty.config.NettyProperties",
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "thread.pool",
+      "type": "com.dxp.springbootnetty.config.ThreadPoolProperties",
+      "sourceType": "com.dxp.springbootnetty.config.ThreadPoolProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "netty.port",
+      "type": "java.lang.Integer",
+      "description": "Description for netty.server.port.",
+      "defaultValue": 7777,
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "netty.boss-count",
+      "type": "java.lang.Integer",
+      "description": "Description for netty.boss-count.",
+      "defaultValue": 1,
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "netty.worker-count",
+      "type": "java.lang.Integer",
+      "description": "Description for netty.worker-count.",
+      "defaultValue": 1,
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "netty.keep-alive",
+      "type": "java.lang.Boolean",
+      "description": "Description for netty.keep-alive.",
+      "defaultValue": true,
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "netty.backlog",
+      "type": "java.lang.Integer",
+      "description": "Description for netty.backlog.",
+      "sourceType": "com.dxp.springbootnetty.config.NettyProperties"
+    },
+    {
+      "name": "thread.pool.core-size",
+      "type": "java.lang.Integer",
+      "description": "Description for thread.pool.core-size.",
+      "defaultValue": 1,
+      "sourceType": "com.dxp.springbootnetty.config.ThreadPoolProperties"
+    },
+    {
+      "name": "thread.pool.max-size",
+      "type": "java.lang.Integer",
+      "description": "Description for thread.pool.core-size.",
+      "defaultValue": 10,
+      "sourceType": "com.dxp.springbootnetty.config.ThreadPoolProperties"
+    },
+    {
+      "name": "thread.pool.alive-time",
+      "type": "java.lang.Integer",
+      "description": "Description for thread.pool.core-size.",
+      "defaultValue": 10,
+      "sourceType": "com.dxp.springbootnetty.config.ThreadPoolProperties"
+    },
+    {
+      "name": "thread.pool.queue-capacity",
+      "type": "java.lang.Integer",
+      "description": "Description for thread.pool.queue-capacity.",
+      "defaultValue": 2000,
+      "sourceType": "com.dxp.springbootnetty.config.ThreadPoolProperties"
+    }
+  ]
+}
